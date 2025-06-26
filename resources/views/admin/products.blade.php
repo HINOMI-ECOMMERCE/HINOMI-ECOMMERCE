@@ -32,10 +32,20 @@
                         </div>
                     </form>
                 </div>
+<<<<<<< HEAD
+                <a class="tf-button style-1 w208" href="{{route('admin.product.add')}}"><i
+                        class="icon-plus"></i>Add new</a>
+            </div>
+            <div class="table-responsive">
+                 @if (Session::has('status'))
+                    <p class="alert alert-success">{{ Session::get('status') }}</p>
+                @endif
+=======
                 <a class="tf-button style-1 w208" href="add-product.html"><i
                         class="icon-plus"></i>Add new</a>
             </div>
             <div class="table-responsive">
+>>>>>>> main
                 <table class="table table-striped table-bordered">
                     <thead>
                         <tr>
@@ -80,12 +90,22 @@
                                             <i class="icon-eye"></i>
                                         </div>
                                     </a>
+<<<<<<< HEAD
+                                    <a href="{{route('admin.product.edit',['id' => $product->id])}}">
+=======
                                     <a href="#">
+>>>>>>> main
                                         <div class="item edit">
                                             <i class="icon-edit-3"></i>
                                         </div>
                                     </a>
+<<<<<<< HEAD
+                                    <form action="{{route('admin.product.delete',['id' => $product->id])}}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+=======
                                     <form action="#" method="POST">
+>>>>>>> main
                                         <div class="item text-danger delete">
                                             <i class="icon-trash-2"></i>
                                         </div>
@@ -106,4 +126,30 @@
         </div>
     </div>
 </div>
+<<<<<<< HEAD
 @endsection 
+
+@push('scripts')
+<script>
+    $(function() {
+        $('.delete').on('click', function(e) {
+            e.preventDefault();
+            var form = $(this).closest('form');
+            swal({
+                title: "Are you sure?",
+                text: "You won't be able to revert this!",
+                icon: "warning",
+                buttons: ["No", "Yes"],
+                dangerMode: true,
+            }).then(function(result) {
+                if (result) {
+                    form.submit();
+                }
+            });
+        });
+    });
+</script>
+@endpush
+=======
+@endsection 
+>>>>>>> main

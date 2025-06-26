@@ -11,6 +11,19 @@
         "loop": true
       }'>
       <div class="swiper-wrapper">
+<<<<<<< HEAD
+        @foreach($slides as $slide)
+        <div class="swiper-slide">
+          <div class="overflow-hidden position-relative h-100">
+            <div class="slideshow-character position-absolute bottom-0 pos_right-center">
+              <img loading="lazy" src="{{ asset ('uploads/slides')}}/{{$slide->image}}" width="542" height="733"
+                alt="Woman Fashion 1"
+                class="slideshow-character__img animate animate_fade animate_btt animate_delay-9 w-auto h-auto" />
+              <div class="character_markup type2">
+                <p class="text-uppercase font-sofia mark-grey-color animate animate_fade animate_btt animate_delay-10 mb-0">
+                {{ $slide->tagline }}</p>      
+              </p>
+=======
         <div class="swiper-slide">
           <div class="overflow-hidden position-relative h-100">
             <div class="slideshow-character position-absolute bottom-0 pos_right-center">
@@ -21,11 +34,17 @@
                 <p
                   class="text-uppercase font-sofia mark-grey-color animate animate_fade animate_btt animate_delay-10 mb-0">
                   Dresses</p>
+>>>>>>> main
               </div>
             </div>
             <div class="slideshow-text container position-absolute start-50 top-50 translate-middle">
               <h6 class="text_dash text-uppercase fs-base fw-medium animate animate_fade animate_btt animate_delay-3">
                 New Arrivals</h6>
+<<<<<<< HEAD
+              <h2 class="h1 fw-normal mb-0 animate animate_fade animate_btt animate_delay-5">{{$slide->title}}</h2>
+              <h2 class="h1 fw-bold animate animate_fade animate_btt animate_delay-5">{{$slide->subtitle}}</h2>
+              <a href="{{$slide->link}}"
+=======
               <h2 class="h1 fw-normal mb-0 animate animate_fade animate_btt animate_delay-5">Night Spring</h2>
               <h2 class="h1 fw-bold animate animate_fade animate_btt animate_delay-5">Dresses</h2>
               <a href="#"
@@ -71,11 +90,16 @@
               <h2 class="h1 fw-normal mb-0 animate animate_fade animate_btt animate_delay-5">Night Spring</h2>
               <h2 class="h1 fw-bold animate animate_fade animate_btt animate_delay-5">Dresses</h2>
               <a href="#"
+>>>>>>> main
                 class="btn-link btn-link_lg default-underline fw-medium animate animate_fade animate_btt animate_delay-7">Shop
                 Now</a>
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+        @endforeach
+=======
+>>>>>>> main
       </div>
 
       <div class="container">
@@ -128,6 +152,19 @@
               }
             }'>
             <div class="swiper-wrapper">
+<<<<<<< HEAD
+  @foreach($categories as $category)
+  <div class="swiper-slide">
+    <img loading="lazy" class="w-100 h-auto mb-3" src="{{ asset('uploads/categories/' . $category->image) }}" width="124"
+      height="124" alt="{{ $category->name }}" />
+    <div class="text-center">
+      <a href="{{ route('shop.index', ['categories' => $category->id]) }}" class="menu-link fw-medium">{{ $category->name }}</a>
+    </div>
+  </div>
+  @endforeach
+</div>
+
+=======
               <div class="swiper-slide">
                 <img loading="lazy" class="w-100 h-auto mb-3" src="{{('assets/images/home/demo3/category_1.png') }}" width="124"
                   height="124" alt="" />
@@ -185,6 +222,7 @@
                 </div>
               </div>
             </div><!-- /.swiper-wrapper -->
+>>>>>>> main
           </div><!-- /.swiper-container js-swiper-slider -->
 
           <div
@@ -235,7 +273,11 @@
               </div>
             </div>
 
+<<<<<<< HEAD
+            <a href="{{route('shop.index')}}" class="btn-link default-underline text-uppercase fw-medium mt-3">View All</a>
+=======
             <a href="#" class="btn-link default-underline text-uppercase fw-medium mt-3">View All</a>
+>>>>>>> main
           </div>
           <div class="col-md-6 col-lg-8 col-xl-80per">
             <div class="position-relative">
@@ -273,6 +315,14 @@
                   }
                 }'>
                 <div class="swiper-wrapper">
+<<<<<<< HEAD
+                  @foreach($sproducts as $sproduct)
+                  <div class="swiper-slide product-card product-card_style3">
+                    <div class="pc__img-wrapper">
+                      <a href="{{route('shop.product.details',['product_slug'=>$sproduct->slug])}}">
+                        <img loading="lazy" src="{{ asset ('uploads/products') }}/{{$sproduct->image}}" width="258" height="313"
+                          alt="{{$sproduct->name}}" class="pc__img">
+=======
                   <div class="swiper-slide product-card product-card_style3">
                     <div class="pc__img-wrapper">
                       <a href="details.html">
@@ -280,10 +330,30 @@
                           alt="Cropped Faux leather Jacket" class="pc__img">
                         <img loading="lazy" src="{{ asset ('assets/images/home/demo3/product-0-2.jpg') }}" width="258" height="313"
                           alt="Cropped Faux leather Jacket" class="pc__img pc__img-second">
+>>>>>>> main
                       </a>
                     </div>
 
                     <div class="pc__info position-relative">
+<<<<<<< HEAD
+                      <h6 class="pc__title"><a href="{{route('shop.product.details',['product_slug'=>$sproduct->slug])}}">{{$sproduct->name}}</a></h6>
+                      <div class="product-card__price d-flex">
+                        <span class="money price text-secondary">
+                          @if($sproduct->sale_price)
+                              <s>${{$sproduct->regular_price}}</s>${{$sproduct->sale_price}}
+                          @else
+                              ${{$sproduct->regular_price}}
+                          @endif
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  @endforeach
+                </div><!-- /.swiper-wrapper -->
+              </div><!-- /.swiper-container js-swiper-slider -->
+            </div><!-- /.position-relative -->
+          </div> 
+=======
                       <h6 class="pc__title"><a href="details.html">Cropped Faux Leather Jacket</a></h6>
                       <div class="product-card__price d-flex">
                         <span class="money price text-secondary">$29</span>
@@ -575,6 +645,7 @@
               </div><!-- /.swiper-container js-swiper-slider -->
             </div><!-- /.position-relative -->
           </div>
+>>>>>>> main
         </div>
       </section>
 
@@ -617,16 +688,36 @@
         <h2 class="section-title text-center mb-3 pb-xl-3 mb-xl-4">Featured Products</h2>
 
         <div class="row">
+<<<<<<< HEAD
+          @foreach($fproducts as $fproduct)
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="product-card product-card_style3 mb-3 mb-md-4 mb-xxl-5">
+              <div class="pc__img-wrapper">
+                <a href="{{route('shop.product.details',['product_slug'=>$fproduct->slug])}}">
+                  <img loading="lazy" src="{{ asset ('uploads/products')}}/{{$fproduct->image}}" width="330" height="400"
+=======
           <div class="col-6 col-md-4 col-lg-3">
             <div class="product-card product-card_style3 mb-3 mb-md-4 mb-xxl-5">
               <div class="pc__img-wrapper">
                 <a href="details.html">
                   <img loading="lazy" src="{{ asset ('assets/images/home/demo3/product-4.jpg') }}" width="330" height="400"
+>>>>>>> main
                     alt="Cropped Faux leather Jacket" class="pc__img">
                 </a>
               </div>
 
               <div class="pc__info position-relative">
+<<<<<<< HEAD
+                <h6 class="pc__title"><a href="details.html">{{$fproduct->name}}</a></h6>
+                <div class="product-card__price d-flex align-items-center">
+                  <span class="money price text-secondary">
+                    @if($fproduct->sale_price)
+                      <s>${{$fproduct->regular_price}}</s>${{$fproduct->sale_price}}
+                    @else
+                        ${{$fproduct->regular_price}}
+                    @endif
+                  </span>
+=======
                 <h6 class="pc__title"><a href="details.html">Cropped Faux Leather Jacket</a></h6>
                 <div class="product-card__price d-flex align-items-center">
                   <span class="money price text-secondary">$29</span>
@@ -905,10 +996,16 @@
                       <use href="#icon_heart" />
                     </svg>
                   </button>
+>>>>>>> main
                 </div>
               </div>
             </div>
           </div>
+<<<<<<< HEAD
+          
+          @endforeach
+=======
+>>>>>>> main
         </div><!-- /.row -->
 
         <div class="text-center mt-2">

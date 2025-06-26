@@ -51,8 +51,14 @@
                                             </div>
                                             <div class="upload-image flex-grow">
                                                 <div class="item" id="imgpreview" style="display:none">
+<<<<<<< HEAD
+                                                    <img src="" class="effect8" alt="Preview Image" style="max-width: 200px;">
+                                                </div>
+
+=======
                                                     <img src="upload-1.html" class="effect8" alt="">
                                                 </div>
+>>>>>>> main
                                                 <div id="upload-file" class="item up-load">
                                                     <label class="uploadfile" for="myFile">
                                                         <span class="icon">
@@ -79,6 +85,35 @@
 
 @push('scripts')
 <script>
+<<<<<<< HEAD
+    $(document).ready(function () {
+        $('#myFile').on("change", function () {
+            const file = this.files[0];
+
+            if (file) {
+                const preview = $("#imgpreview img");
+                const previewContainer = $("#imgpreview");
+
+                const objectURL = URL.createObjectURL(file);
+                preview.attr('src', objectURL);        // Isi URL gambar
+                previewContainer.show();               // Tampilkan preview
+            }
+        });
+
+        $("input[name='name']").on("change", function () {
+            $("input[name='slug']").val(StringToSlug($(this).val()));
+        });
+
+        function StringToSlug(text) {
+            return text
+                .toLowerCase()
+                .replace(/[\s\W-]+/g, '-') // Spasi & simbol ke strip
+                .replace(/^-+|-+$/g, ''); // Hapus strip di awal/akhir
+        }
+    });
+</script>
+
+=======
     $(function() {
         $('#myFile').on("change", function(e) {
             const photoInp = $('#myFile');
@@ -100,4 +135,5 @@
         }
     });
 </script>
+>>>>>>> main
 @endpush

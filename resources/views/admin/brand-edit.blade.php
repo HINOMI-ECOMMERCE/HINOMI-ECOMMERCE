@@ -83,6 +83,31 @@
 
 @push('scripts')
 <script>
+<<<<<<< HEAD
+    $(document).ready(function () {
+        $('#myFile').on("change", function () {
+            const file = this.files[0];
+
+            if (file) {
+                const preview = $("#imgpreview img");
+                const previewContainer = $("#imgpreview");
+
+                const objectURL = URL.createObjectURL(file);
+                preview.attr('src', objectURL);        // Isi URL gambar
+                previewContainer.show();               // Tampilkan preview
+            }
+        });
+
+        $("input[name='name']").on("change", function () {
+            $("input[name='slug']").val(StringToSlug($(this).val()));
+        });
+
+        function StringToSlug(text) {
+            return text
+                .toLowerCase()
+                .replace(/[\s\W-]+/g, '-') // Spasi & simbol ke strip
+                .replace(/^-+|-+$/g, ''); // Hapus strip di awal/akhir
+=======
     $(function() {
         $('#myFile').on("change", function(e) {
             const photoInp = $('#myFile');
@@ -101,6 +126,7 @@
             return Text.toLowerCase()
                 .replace(/[^\w]+/g, "") // Hapus karakter selain huruf/angka/spasi
                 .replace(/+/g, "-");    // Ganti spasi jadi strip
+>>>>>>> main
         }
     });
 </script>

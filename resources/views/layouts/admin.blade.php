@@ -34,10 +34,71 @@
         <span></span>
     </div>
 </div> -->
+<<<<<<< HEAD
+ <style>
+  #box-content-search {
+    padding: 10px 0;
+  }
+
+  #box-content-search li {
+    list-style: none;
+  }
+
+  .search-result-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    transition: background 0.2s;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .search-result-item:hover {
+    background: #f5f5f5;
+  }
+
+  .search-result-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-right: 12px;
+    background-color: #f1f1f1;
+  }
+
+  .search-result-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .search-result-info a {
+    color: #212529;
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: none;
+    line-height: 1.2;
+  }
+
+  .search-result-info a:hover {
+    text-decoration: underline;
+  }
+
+  .divider {
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 6px 0;
+  }
+</style>
+                <div class="section-menu-left">
+                    <div class="box-logo">
+                        <a href="{{route('home.index')}}" id="site-logo-inner">
+=======
 
                 <div class="section-menu-left">
                     <div class="box-logo">
                         <a href="{{('admin.index')}}" id="site-logo-inner">
+>>>>>>> main
                             <img class="" id="logo_header_1" alt="" src="{{ asset('images/logo/hinomi.png') }}"
                                 data-light="{{ asset('images/logo/hinomi.png') }}" data-dark="{{ asset('images/logo/hinomi.png') }}">
                         </a>
@@ -50,7 +111,11 @@
                             <div class="center-heading">Main Home</div>
                             <ul class="menu-list">
                                 <li class="menu-item">
+<<<<<<< HEAD
+                                    <a href="{{route('admin.index')}}" class="">
+=======
                                     <a href="{{('admin.index')}}" class="">
+>>>>>>> main
                                         <div class="icon"><i class="icon-grid"></i></div>
                                         <div class="text">Dashboard</div>
                                     </a>
@@ -66,7 +131,11 @@
                                     </a>
                                     <ul class="sub-menu">
                                         <li class="sub-menu-item">
+<<<<<<< HEAD
+                                            <a href="{{route('admin.product.add')}}" class="">
+=======
                                             <a href="add-product.html" class="">
+>>>>>>> main
                                                 <div class="text">Add Product</div>
                                             </a>
                                         </li>
@@ -114,14 +183,22 @@
                                     </ul>
                                 </li>
 
+<<<<<<< HEAD
+                                <li class="menu-item has-children">
+=======
                                 <!-- <li class="menu-item has-children">
+>>>>>>> main
                                     <a href="javascript:void(0);" class="menu-item-button">
                                         <div class="icon"><i class="icon-file-plus"></i></div>
                                         <div class="text">Order</div>
                                     </a>
                                     <ul class="sub-menu">
                                         <li class="sub-menu-item">
+<<<<<<< HEAD
+                                            <a href="{{route('admin.orders')}}" class="">
+=======
                                             <a href="orders.html" class="">
+>>>>>>> main
                                                 <div class="text">Orders</div>
                                             </a>
                                         </li>
@@ -133,6 +210,15 @@
                                     </ul>
                                 </li>
                                 <li class="menu-item">
+<<<<<<< HEAD
+                                    <a href="{{route('admin.slides')}}" class="">
+                                        <div class="icon"><i class="icon-image"></i></div>
+                                        <div class="text">Slides</div>
+                                    </a>
+                                </li>
+                                <li class="menu-item" class="">
+                                    <a href="{{route('admin.coupons')}}" class="">
+=======
                                     <a href="slider.html" class="">
                                         <div class="icon"><i class="icon-image"></i></div>
                                         <div class="text">Slider</div>
@@ -140,10 +226,20 @@
                                 </li>
                                 <li class="menu-item">
                                     <a href="coupons.html" class="">
+>>>>>>> main
                                         <div class="icon"><i class="icon-grid"></i></div>
                                         <div class="text">Coupons</div>
                                     </a>
                                 </li>
+<<<<<<< HEAD
+                                 <li class="menu-item" class="">
+                                    <a href="{{route('admin.contacts')}}" class="">
+                                        <div class="icon"><i class="icon-mail"></i></div>
+                                        <div class="text">Message</div>
+                                    </a>
+                                </li>
+=======
+>>>>>>> main
 
                                 <li class="menu-item">
                                     <a href="users.html" class="">
@@ -157,7 +253,11 @@
                                         <div class="icon"><i class="icon-settings"></i></div>
                                         <div class="text">Settings</div>
                                     </a>
+<<<<<<< HEAD
+                                </li>
+=======
                                 </li> -->
+>>>>>>> main
 
                                 <li class="menu-item">
                                     <form method="POST"action="{{route('logout')}}" id="logout-form">
@@ -189,12 +289,21 @@
 
                                 <form class="form-search flex-grow">
                                     <fieldset class="name">
+<<<<<<< HEAD
+                                        <input type="text" placeholder="Search here..." class="show-search" name="name" id="search-input" tabindex="2" value="" aria-required="true" required="" autocomplete="off">
+=======
                                         <input type="text" placeholder="Search here..." class="show-search" name="name"
                                             tabindex="2" value="" aria-required="true" required="">
+>>>>>>> main
                                     </fieldset>
                                     <div class="button-submit">
                                         <button class="" type="submit"><i class="icon-search"></i></button>
                                     </div>
+<<<<<<< HEAD
+                                    <div class="box-content-search">
+                                        <ul id="box-content-search">
+
+=======
                                     <div class="box-content-search" id="box-content-search">
                                         <ul class="mb-24">
                                             <li class="mb-14">
@@ -311,6 +420,7 @@
                                                     </li>
                                                 </ul>
                                             </li>
+>>>>>>> main
                                         </ul>
                                     </div>
                                 </form>
@@ -471,6 +581,43 @@
     <script src="{{ asset('js/sweetalert.min.js') }}"></script>    
     <script src="{{ asset('js/apexcharts/apexcharts.js') }}"></script>
     <script src="{{ asset('js/main.js') }}"></script>
+<<<<<<< HEAD
+
+    <script>
+  $(function(){
+    $("#search-input").on("keyup", function() {
+      var searchQuery = $(this).val();
+      if (searchQuery.length > 2) {
+        $.ajax({
+          type: "GET",
+          url: "{{ route('admin.search') }}",
+          data: { query: searchQuery },
+          dataType: "json",
+          success: function(data) {
+            $("#box-content-search").html('');
+            $.each(data, function(index, item) {
+              var url = "{{ route('admin.product.edit', ['id' => 'product_id']) }}";
+              var link = url.replace('product_id', item.id);
+              $("#box-content-search").append(`
+                <li>
+                  <a href="${link}" class="search-result-item">
+                    <img src="{{ asset('uploads/products/thumbnails') }}/${item.image}" alt="${item.name}">
+                    <div class="search-result-info">
+                      <span>${item.name}</span>
+                    </div>
+                  </a>
+                  <div class="divider"></div>
+                </li>
+              `);
+            });
+          }
+        });
+      }
+    });
+  });
+</script>
+    
+=======
     <script>
         (function ($) {
 
@@ -569,6 +716,7 @@
             jQuery(window).on("resize", function () { });
         })(jQuery);
     </script>
+>>>>>>> main
      @stack("scripts")
 </body>
 </html>
