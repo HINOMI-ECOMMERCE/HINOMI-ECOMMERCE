@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+<<<<<<< HEAD
 use App\Models\Slide;
 use App\Models\Category;
 use App\Models\Product;
@@ -50,4 +51,15 @@ class HomeController extends Controller
         return response()->json($results);
     }
 
+=======
+
+use Illuminate\Http\Request;
+
+class HomeController extends Controller
+{
+    public function index()
+    {
+        return view('index');
+    }
+>>>>>>> main
 }

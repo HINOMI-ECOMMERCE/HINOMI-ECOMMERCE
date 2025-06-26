@@ -10,7 +10,11 @@
   <title>{{ config('app.name','Laravel')}}</title>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <meta name="author" content="surfside media" />
+<<<<<<< HEAD
   <link rel="shortcut icon" href="{{asset('assets/images/hinomi.png' )}}" type="image/x-icon">
+=======
+  <link rel="shortcut icon" href="{{asset('assets/images/favicon.ico' )}}" type="image/x-icon">
+>>>>>>> main
   <link rel="preconnect" href="https://fonts.gstatic.com/">
   <link
     href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
@@ -18,7 +22,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Allura&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{asset('assets/css/plugins/swiper.min.css') }}" type="text/css" />
   <link rel="stylesheet" href="{{asset('assets/css/style.css') }}" type="text/css" />
+<<<<<<< HEAD
   <link rel="stylesheet" type="text/css" href="{{ asset('css/sweetalert.min.css') }}">
+=======
+>>>>>>> main
   <link rel="stylesheet" href="{{asset('assets/css/custom.css') }}" type="text/css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
@@ -253,6 +260,7 @@
     </symbol>
   </svg>
   <style>
+<<<<<<< HEAD
   #box-content-search {
     padding: 10px 0;
   }
@@ -308,6 +316,16 @@
   }
 </style>
 
+=======
+    #header {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+
+    .logo__image {
+      max-width: 220px;
+    }
+>>>>>>> main
   </style>
   <div class="header-mobile header_sticky">
     <div class="container d-flex align-items-center h-100">
@@ -361,16 +379,27 @@
               <a href="{{route('home.index')}}" class="navigation__link">Home</a>
             </li>
             <li class="navigation__item">
+<<<<<<< HEAD
               <a href="{{route('shop.index')}}" class="navigation__link">Shop</a>
             </li>
             <li class="navigation__item">
               <a href="{{route('cart.index')}}" class="navigation__link">Cart</a>
+=======
+              <a href="shop.html" class="navigation__link">Shop</a>
+            </li>
+            <li class="navigation__item">
+              <a href="cart.html" class="navigation__link">Cart</a>
+>>>>>>> main
             </li>
             <li class="navigation__item">
               <a href="about.html" class="navigation__link">About</a>
             </li>
             <li class="navigation__item">
+<<<<<<< HEAD
               <a href="{{route('home.contact')}}" class="navigation__link">Contact</a>
+=======
+              <a href="contact.html" class="navigation__link">Contact</a>
+>>>>>>> main
             </li>
           </ul>
         </div>
@@ -450,16 +479,27 @@
               <a href="{{route('home.index')}}" class="navigation__link">Home</a>
             </li>
             <li class="navigation__item">
+<<<<<<< HEAD
               <a href="{{route('shop.index')}}" class="navigation__link">Shop</a>
             </li>
             <li class="navigation__item">
               <a href="{{route('cart.index')}}" class="navigation__link">Cart</a>
+=======
+              <a href="shop.html" class="navigation__link">Shop</a>
+            </li>
+            <li class="navigation__item">
+              <a href="cart.html" class="navigation__link">Cart</a>
+>>>>>>> main
             </li>
             <li class="navigation__item">
               <a href="about.html" class="navigation__link">About</a>
             </li>
             <li class="navigation__item">
+<<<<<<< HEAD
               <a href="{{route('home.contact')}}" class="navigation__link">Contact</a>
+=======
+              <a href="contact.html" class="navigation__link">Contact</a>
+>>>>>>> main
             </li>
           </ul>
         </nav>
@@ -480,8 +520,14 @@
               <form action="#" method="GET" class="search-field container">
                 <p class="text-uppercase text-secondary fw-medium mb-4">What are you looking for?</p>
                 <div class="position-relative">
+<<<<<<< HEAD
                   <input class="search-field__input search-popup__input w-100 fw-medium" type="text"name="search-keyword" id="search-input" placeholder="Search products" />
                   <button class="btn-icon search-popup__submit" type="submit">  
+=======
+                  <input class="search-field__input search-popup__input w-100 fw-medium" type="text"
+                    name="search-keyword" placeholder="Search products" />
+                  <button class="btn-icon search-popup__submit" type="submit">
+>>>>>>> main
                     <svg class="d-block" width="20" height="20" viewBox="0 0 20 20" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <use href="#icon_search" />
@@ -491,9 +537,26 @@
                 </div>
 
                 <div class="search-popup__results">
+<<<<<<< HEAD
                   <ul id="box-content-search">
 
                   </ul>
+=======
+                  <div class="sub-menu search-suggestion">
+                    <h6 class="sub-menu__title fs-base">Quicklinks</h6>
+                    <ul class="sub-menu__list list-unstyled">
+                      <li class="sub-menu__item"><a href="shop2.html" class="menu-link menu-link_us-s">New Arrivals</a>
+                      </li>
+                      <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Dresses</a></li>
+                      <li class="sub-menu__item"><a href="shop3.html" class="menu-link menu-link_us-s">Accessories</a>
+                      </li>
+                      <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Footwear</a></li>
+                      <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Sweatshirt</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="search-result row row-cols-5"></div>
+>>>>>>> main
                 </div>
               </form>
             </div>
@@ -520,6 +583,7 @@
             </div>
            @endguest
 
+<<<<<<< HEAD
           <a href="{{route('wishlist.index')}}" class="header-tools__item header-tools__cart" >
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <use href="#icon_heart" />
@@ -533,13 +597,26 @@
           </a>
 
           <a href="{{route('cart.index')}}" class="header-tools__item header-tools__cart">
+=======
+          <a href="wishlist.html" class="header-tools__item">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <use href="#icon_heart" />
+            </svg>
+          </a>
+
+          <a href="cart.html" class="header-tools__item header-tools__cart">
+>>>>>>> main
             <svg class="d-block" width="20" height="20" viewBox="0 0 20 20" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <use href="#icon_cart" />
             </svg>
+<<<<<<< HEAD
             @if(Cart::instance('cart')->content()->count()>0) 
             <span class="cart-amount d-block position-absolute js-cart-items-count">{{Cart::instance('cart')->content()->count()}}</span>
             @endif
+=======
+            <span class="cart-amount d-block position-absolute js-cart-items-count">3</span>
+>>>>>>> main
           </a>
         </div>
       </div>
@@ -560,7 +637,11 @@
             </a>
           </div>
           <p class="footer-address">123 Beach Avenue, Surfside City, CA 00000</p>
+<<<<<<< HEAD
           <p class="m-0"><strong class="fw-medium">contact@hinomi</strong></p>
+=======
+          <p class="m-0"><strong class="fw-medium">contact@surfsidemedia.in</strong></p>
+>>>>>>> main
           <p><strong class="fw-medium">+1 000-000-0000</strong></p>
 
           <ul class="social-links list-unstyled d-flex flex-wrap mb-0">
@@ -658,7 +739,11 @@
 
     <div class="footer-bottom">
       <div class="container d-md-flex align-items-center">
+<<<<<<< HEAD
         <span class="footer-copyright me-auto">©2025 Hinomi</span>
+=======
+        <span class="footer-copyright me-auto">©2024 Surfside Media</span>
+>>>>>>> main
         <div class="footer-settings d-md-flex align-items-center">
           <a href="privacy-policy.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="terms-conditions.html">Terms &amp;
             Conditions</a>
@@ -711,6 +796,7 @@
   <script src="{{ asset('assets/js/plugins/jquery.min.js') }}"></script>
   <script src="{{ asset('assets/js/plugins/bootstrap.bundle.min.js') }}"></script>
   <script src="{{ asset('assets/js/plugins/bootstrap-slider.min.js') }}"></script>
+<<<<<<< HEAD
   <script src="{{ asset('js/sweetalert.min.js') }}"></script> 
   <script src="{{ asset('assets/js/plugins/swiper.min.js') }}"></script>
   <script src="{{ asset('assets/js/plugins/countdown.js') }}"></script>
@@ -748,6 +834,10 @@
   });
 </script>
 
+=======
+  <script src="{{ asset('assets/js/plugins/swiper.min.js') }}"></script>
+  <script src="{{ asset('assets/js/plugins/countdown.js') }}"></script>
+>>>>>>> main
   <script src="{{ asset('assets/js/theme.js') }}"></script>
   @stack("scripts")
 </body>

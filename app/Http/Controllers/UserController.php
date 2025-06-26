@@ -1,12 +1,17 @@
 <?php
 
 namespace App\Http\Controllers;
+<<<<<<< HEAD
 use App\Models\Order;
 use App\Models\OrderItem;
 use App\Models\Transaction;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+=======
+
+use Illuminate\Http\Request;
+>>>>>>> main
 
 class UserController extends Controller
 {
@@ -14,6 +19,7 @@ class UserController extends Controller
     {
         return view('user.index');
     }
+<<<<<<< HEAD
 
     public function orders()
     {
@@ -44,4 +50,6 @@ class UserController extends Controller
         $order->save();
         return back()->with('status', 'Order has been cancelled successfully.');
     }
+=======
+>>>>>>> main
 }

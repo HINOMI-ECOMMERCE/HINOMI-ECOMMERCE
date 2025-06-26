@@ -51,9 +51,14 @@
                                             </div>
                                             <div class="upload-image flex-grow">
                                                 <div class="item" id="imgpreview" style="display:none">
+<<<<<<< HEAD
                                                     <img src="" class="effect8" alt="Preview Image" style="max-width: 200px;">
                                                 </div>
 
+=======
+                                                    <img src="upload-1.html" class="effect8" alt="">
+                                                </div>
+>>>>>>> main
                                                 <div id="upload-file" class="item up-load">
                                                     <label class="uploadfile" for="myFile">
                                                         <span class="icon">
@@ -80,6 +85,7 @@
 
 @push('scripts')
 <script>
+<<<<<<< HEAD
     $(document).ready(function () {
         $('#myFile').on("change", function () {
             const file = this.files[0];
@@ -107,4 +113,27 @@
     });
 </script>
 
+=======
+    $(function() {
+        $('#myFile').on("change", function(e) {
+            const photoInp = $('#myFile');
+            const [file] = this.files;
+            if (file) {
+                $("#imgpreview img").attr('src', URL.createObjectURL(file));
+                $("#imgpreview").show();
+            }
+        });
+
+        $("input[name='name']").on("change", function() {
+            $("input[name='slug']").val(StringToSlug($(this).val()));
+        });
+
+        function StringToSlug(Text) {
+            return Text.toLowerCase()
+                .replace(/[^\w]+/g, "") // Hapus karakter selain huruf/angka/spasi
+                .replace(/+/g, "-");    // Ganti spasi jadi strip
+        }
+    });
+</script>
+>>>>>>> main
 @endpush

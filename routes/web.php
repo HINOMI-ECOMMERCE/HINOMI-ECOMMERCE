@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
@@ -6,12 +7,18 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\WishlistController;
+=======
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
+>>>>>>> main
 use App\Http\Middleware\AuthAdmin;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 
 Auth::routes();
+<<<<<<< HEAD
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/home', [HomeController::class, 'index'])->name('home.index');
 Route::get('/shop', [ShopController::class, 'index'])->name('shop.index');
@@ -47,6 +54,14 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/account-orders', [UserController::class, 'orders'])->name('user.orders');
     Route::get('/account-order{order_id}/details', [UserController::class, 'order_details'])->name('user.order.details');
     Route::put('/account-order/cancel-order', [UserController::class, 'order_cancel'])->name('user.order.cancel');
+=======
+
+Route::get('/', [HomeController::class, 'index'])->name('home.index');
+
+
+Route::middleware(['auth'])->group(function(){
+    Route::get('/account-dashboard', [UserController::class, 'index'])->name('user.index');
+>>>>>>> main
 });
 
 Route::middleware(['auth',AuthAdmin::class])->group(function(){
@@ -68,6 +83,7 @@ Route::middleware(['auth',AuthAdmin::class])->group(function(){
 
     Route::get('/admin/products', [AdminController::class, 'products'])->name('admin.products');
     Route::get('/admin/product/add', [AdminController::class, 'product_add'])->name('admin.product.add');
+<<<<<<< HEAD
     Route::post('/admin/product/store', [AdminController::class, 'product_store'])->name('admin.product.store');
     Route::get('/admin/product/edit/{id}', [AdminController::class, 'product_edit'])->name('admin.product.edit');
     Route::put('/admin/product/update', [AdminController::class, 'product_update'])->name('admin.product.update');
@@ -95,5 +111,7 @@ Route::middleware(['auth',AuthAdmin::class])->group(function(){
     Route::delete('admin/contact/{id}/delete', [AdminController::class, 'contact_delete'])->name('admin.contact.delete');
 
     Route::get('/admin/search', [AdminController::class, 'search'])->name('admin.search');
+=======
+>>>>>>> main
 });
  

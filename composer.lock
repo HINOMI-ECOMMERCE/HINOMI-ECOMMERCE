@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "57eeb464a52c63b5f3df89f577391d25",
+=======
+    "content-hash": "c8fd576fffd7dce37fb2b0ba4ef413aa",
+>>>>>>> main
     "packages": [
         {
             "name": "brick/math",
@@ -3578,6 +3582,7 @@
             "time": "2024-04-27T21:32:50+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "surfsidemedia/shoppingcart",
             "version": "v2.0.0",
             "source": {
@@ -3642,6 +3647,8 @@
             "time": "2025-03-27T16:52:51+00:00"
         },
         {
+=======
+>>>>>>> main
             "name": "symfony/clock",
             "version": "v7.2.0",
             "source": {

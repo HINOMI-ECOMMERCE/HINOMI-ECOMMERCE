@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\File;
 use Carbon\Carbon;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Intervention\Image\Laravel\Facades\Image;
@@ -18,12 +19,18 @@ use App\Models\Order;
 use App\Models\OrderItem;
 use App\Models\Transaction;
 use App\Models\Contact;
+=======
+use Intervention\Image\Laravel\Facades\Image;
+use App\Models\Category;
+use App\Models\Product;
+>>>>>>> main
 
 
 class AdminController extends Controller
 {
     public function index()
     {
+<<<<<<< HEAD
         $orders = Order::orderBY('created_at', 'DESC')->get()->take(10);
         $dashboardDatas = DB::select("SELECT SUM(total) AS TotalAmount,
                                     SUM(IF(status = 'ordered', total, 0)) AS TotalOrderedAmount,
@@ -68,6 +75,9 @@ class AdminController extends Controller
 
         return view('admin.index', compact('orders', 'dashboardDatas','AmountM', 'OrderedAmountM', 'DeliveredAmountM', 'CanceledAmountM', 
                                             'TotalAmount', 'TotalOrderedAmount', 'TotalDeliveredAmount', 'TotalCanceledAmount'));
+=======
+        return view('admin.index');
+>>>>>>> main
     }
 
     public function brands()
@@ -102,7 +112,11 @@ class AdminController extends Controller
         $brand->save();
         return redirect()->route('admin.brands')->with('status', 'Brand added successfully');
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> main
     public function brand_edit($id)
     {
         $brand = Brand::find($id);
@@ -110,6 +124,7 @@ class AdminController extends Controller
     }
 
     public function brand_update(Request $request)
+<<<<<<< HEAD
     {
         $request->validate([
             'name' => 'required',
@@ -138,6 +153,37 @@ class AdminController extends Controller
         return redirect()->route('admin.brands')->with('status', 'Brand updated successfully');
     }
 
+=======
+{
+    $request->validate([
+        'name' => 'required',
+        'slug' => 'required|unique:brands,slug,' . $request->id,
+        'image' => 'nullable|mimes:jpg,jpeg,png|max:2048',
+    ]);
+
+    $brand = Brand::find($request->id);
+    $brand->name = $request->name;
+    $brand->slug = Str::slug($request->slug);
+
+    if ($request->hasFile('image')) {
+        if (File::exists(public_path('uploads/brands') . '/' . $brand->image)) 
+        {
+            File::delete(public_path('uploads/brands') . '/' . $brand->image);
+        }
+
+        $image = $request->file('image');
+        $file_extension = $image->extension();
+        $file_name = Carbon::now()->timestamp . '.' . $file_extension;
+
+        $this->GenerateBrandThumbnailImage($image, $file_name);
+        $brand->image = $file_name;
+    }
+
+    $brand->save();
+    return redirect()->route('admin.brands')->with('status', 'Brand updated successfully');
+}
+
+>>>>>>> main
 
     public function GenerateBrandThumbnailImage($image, $imageName)
     {
@@ -153,7 +199,12 @@ class AdminController extends Controller
     {
         $brand = Brand::find($id);
         if ($brand) {
+<<<<<<< HEAD
             if (File::exists(public_path('uploads/brands') . '/' . $brand->image)) {
+=======
+            if (File::exists(public_path('uploads/brands') . '/' . $brand->image)) 
+            {
+>>>>>>> main
                 File::delete(public_path('uploads/brands') . '/' . $brand->image);
             }
             $brand->delete();
@@ -165,7 +216,11 @@ class AdminController extends Controller
     public function categories()
     {
         $categories = Category::orderby('id', 'DESC')->paginate(10);
+<<<<<<< HEAD
         return view('admin.categories', compact('categories'));
+=======
+        return view('admin.categories',compact('categories'));
+>>>>>>> main
     }
     public function category_add()
     {
@@ -206,7 +261,11 @@ class AdminController extends Controller
     }
 
     public function category_update(Request $request)
+<<<<<<< HEAD
     {
+=======
+    { 
+>>>>>>> main
         $request->validate([
             'name' => 'required',
             'slug' => 'required|unique:categories,slug,' . $request->id,
@@ -236,6 +295,7 @@ class AdminController extends Controller
     public function category_delete($id)
     {
         $category = Category::find($id);
+<<<<<<< HEAD
         if ($category)
             if (File::exists(public_path('uploads/categories') . '/' . $category->image)) {
                 File::delete(public_path('uploads/categories') . '/' . $category->image);
@@ -669,3 +729,26 @@ class AdminController extends Controller
         return response()->json($results);
     }
 }
+=======
+        if ($category) 
+            if (File::exists(public_path('uploads/categories') . '/' . $category->image)) 
+            {
+                File::delete(public_path('uploads/categories') . '/' . $category->image);
+            }
+            $category->delete();
+            return redirect()->route('admin.categories')->with('status', 'Category deleted successfully');
+        
+    }
+    public function products()
+    {
+        $products = Product::orderby('created_at', 'DESC')->paginate(10);
+        return view('admin.products',compact('products'));
+    }
+    public function product_add()
+    {
+        $categories = Category::select('id', 'name')->orderBY('name')->get();
+        $brands = Brand::select('id', 'name')->orderBY('name')->get();
+        return view('admin.product-add', compact('categories', 'brands'));
+    }
+}
+>>>>>>> main

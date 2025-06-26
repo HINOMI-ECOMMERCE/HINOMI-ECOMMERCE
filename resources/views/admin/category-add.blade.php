@@ -51,7 +51,11 @@
                                             </div>
                                             <div class="upload-image flex-grow">
                                                 <div class="item" id="imgpreview" style="display:none">
+<<<<<<< HEAD
                                                     <img src="" class="effect8" alt="Preview Image" style="max-width: 200px;">
+=======
+                                                    <img src="upload-1.html" class="effect8" alt="">
+>>>>>>> main
                                                 </div>
                                                 <div id="upload-file" class="item up-load">
                                                     <label class="uploadfile" for="myFile">
@@ -78,6 +82,7 @@
 @endsection
 
 @push('scripts')
+<<<<<<< HEAD
 
 <script>
     $(document).ready(function () {
@@ -103,6 +108,27 @@
                 .toLowerCase()
                 .replace(/[\s\W-]+/g, '-') // Spasi & simbol ke strip
                 .replace(/^-+|-+$/g, ''); // Hapus strip di awal/akhir
+=======
+<script>
+    $(function() {
+        $('#myFile').on("change", function(e) {
+            const photoInp = $('#myFile');
+            const [file] = this.files;
+            if (file) {
+                $("#imgpreview img").attr('src', URL.createObjectURL(file));
+                $("#imgpreview").show();
+            }
+        });
+
+        $("input[name='name']").on("change", function() {
+            $("input[name='slug']").val(StringToSlug($(this).val()));
+        });
+
+        function StringToSlug(Text) {
+            return Text.toLowerCase()
+                .replace(/[^\w]+/g, "") // Hapus karakter selain huruf/angka/spasi
+                .replace(/+/g, "-");    // Ganti spasi jadi strip
+>>>>>>> main
         }
     });
 </script>
